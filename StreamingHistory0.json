@@ -36096,3 +36096,4 @@
     "msPlayed" : 9780
   }
 ]
+ print('Number of occurrence of the word Holly:', message.count('Holly'))
