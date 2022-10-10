@@ -1,4 +1,4 @@
-[
+my_songs =[
   {
     "endTime" : "2021-01-02 00:29",
     "artistName" : "EARTHGANG",
@@ -36096,4 +36096,4 @@
     "msPlayed" : 9780
   }
 ]
- print('Number of occurrence of the word Holly:', message.count('Holly'))
+
