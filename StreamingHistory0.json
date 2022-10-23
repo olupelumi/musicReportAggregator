@@ -1,4 +1,4 @@
-my_songs =[
+streamed_songs =[
   {
     "endTime" : "2021-01-02 00:29",
     "artistName" : "EARTHGANG",
@@ -36097,3 +36097,32 @@ my_songs =[
   }
 ]
 
+# Trying to find the most frequently played song
+songFrequencyDict = {}  #key = track(song name) value = #times shown in list
+
+# attain song frequency information
+for song in streamed_songs:
+  track = song["trackName"]
+
+  if track not in songFrequencyDict:
+    songFrequencyDict[track] = 1
+  else:
+    songFrequencyDict[track] += 1
+
+
+sorted_songs_by_playfreq = sorted(songFrequencyDict.items(), key=lambda x:x[1], reverse=True) #sorts in value declining order
+orderedSongs_dict = dict(sorted_songs_by_playfreq)
+
+
+result = dict(list(orderedSongs_dict.items())[0:5])
+
+print("Your top 5 played songs are ...\n")
+
+
+for track, freq in result.items():
+
+ print(track, "with", freq, "plays", end=" ")
+
+ print("\b\b\n", end="")
+
+ print(" ") 
